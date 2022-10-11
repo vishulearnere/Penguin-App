@@ -128,7 +128,7 @@ for col in encode:
 df = df[:1]  # Selects only the first row (the user input data)
 
 # Displays the user input features
-st.subheader('User Input Penguin Features')
+st.header('User Input Penguin Features')
 
 if uploaded_file is not None:
     st.write(df)
@@ -142,9 +142,9 @@ else:
 features, vect1 = st.columns([1, 1], gap="large")
 with features:
     st.write('''<br>''', unsafe_allow_html=True)
-    st.subheader("Penguin Features")
-    st.write("**Island :**", pengu_island)
-    st.write("**Sex :**", pengu_sex)
+    st.header("Penguin Features")
+    st.caption("Island :", pengu_island)
+    st.caption("**Sex :**", pengu_sex)
     st.write("**Bill Length (in mm) :**", df.at[0, 'bill_length_mm'])
     st.write("**Bill Depth (in mm) :**", df.at[0, 'bill_depth_mm'])
     st.write("**Flipper length (in mm) :**", df.at[0, 'flipper_length_mm'])
@@ -169,15 +169,15 @@ prediction_proba = load_clf.predict_proba(df)
 print(prediction)
 print(prediction_proba)
 #st.write(model_dict[model])
-st.subheader('Predicted Species')
+st.header('Predicted Species')
 penguins_species = {0:'Adelie', 1:'Chinstrap', 2:'Gentoo'}
 prediction = prediction[0]
-st.write("**The Predcited Species for Penguine Considering Input Features is  :**",penguins_species[prediction])
+st.sucess("**The Predcited Species for Penguine Considering Input Features is  :**",penguins_species[prediction])
 
-st.subheader('Prediction Probability')
+st.header('Prediction Probability')
 #st.write(prediction_proba)
-st.write("The Probability of Penguin Being of  Adelie Species is",prediction_proba[0][0])
-st.write("The Probability of Penguin Being of  Chinstrap Species is",prediction_proba[0][1])
+st.markdown('''<h4>The Probability of Penguin Being of  Adelie Species is </h4>''',prediction_proba[0][0],unsafe_allow_html=True)
+st.write('''The Probability of Penguin Being of  Chinstrap Species is''',prediction_proba[0][1],,unsafe_allow_html=True)
 st.write("The Probability of Penguin Being of  Gentoo Species is",prediction_proba[0][2])
 
 
