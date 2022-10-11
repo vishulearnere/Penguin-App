@@ -169,20 +169,21 @@ prediction = load_clf.predict(df)
 prediction_proba = load_clf.predict_proba(df)
 print(prediction)
 print(prediction_proba)
-#st.write(model_dict[model])
+
+st.write('''<br>''', unsafe_allow_html=True)
 st.header('Predicted Species')
 penguins_species = {0:'Adelie', 1:'Chinstrap', 2:'Gentoo'}
 prediction = prediction[0]
-st.write('''<br>''', unsafe_allow_html=True)
-st.success("#### The Penguine Species is "+ str(penguins_species[prediction]) + " ")
+st.success("#### The Penguine Species is **"+ str(penguins_species[prediction]) + "**")
 #st.sucess("#### The Predcited Species for Penguine Considering Input Features is "+ str(penguins_species[prediction]) + " ")
 st.warning("The Penguin Species is Predicted on the basis of Input Features")
 
 
+st.write('''<br>''', unsafe_allow_html=True)
 st.header('Prediction Probability')
 #st.write(prediction_proba)
-st.write("<h5>The Probability of Penguin Being of  Adelie Species is " + str(prediction_proba[0][0]) + "</h5>" ,unsafe_allow_html=True)
-st.markdown('''The Probability of Penguin Being of  Chinstrap Species is''' + str(prediction_proba[0][1])+ ''' ''',unsafe_allow_html=True)
-st.write("The Probability of Penguin Being of  Gentoo Species is",prediction_proba[0][2])
+st.info("The Probability of Penguin Being of  Adelie Species is **" + str(prediction_proba[0][0]) + "**")
+#st.info('''The Probability of Penguin Being of  Chinstrap Species is''' + str(prediction_proba[0][1])+ ''' ''',unsafe_allow_html=True)
+#st.info("The Probability of Penguin Being of  Gentoo Species is",prediction_proba[0][2])
 
 
