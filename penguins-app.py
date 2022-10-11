@@ -182,7 +182,10 @@ st.warning("The Penguin Species is Predicted on the basis of Input Features")
 st.write('''<br>''', unsafe_allow_html=True)
 st.header('Prediction Probability')
 #st.write(prediction_proba)
-st.info("The Probability of Penguin Being of  Adelie Species is **" + str(prediction_proba[0][0]) + "**")
+st.info("The Probability of Penguin Being of  Adelie Species :  "+ "**" + str(prediction_proba[0][0]) + "**")
+st.info("The Probability of Penguin Being of  Chinstrap Species :  "+ "**" + str(prediction_proba[0][1]) + "**")
+st.info("The Probability of Penguin Being of  Gentoo Species :  "+ "**" + str(prediction_proba[0][2]) + "**")
+
 #st.info('''The Probability of Penguin Being of  Chinstrap Species is''' + str(prediction_proba[0][1])+ ''' ''',unsafe_allow_html=True)
 #st.info("The Probability of Penguin Being of  Gentoo Species is",prediction_proba[0][2])
 
