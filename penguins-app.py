@@ -144,7 +144,7 @@ features, vect1 = st.columns([1, 1], gap="large")
 with features:
     st.write('''<br>''', unsafe_allow_html=True)
     st.header("Penguin Features")
-    st.write("**<h3>Island :**", pengu_island)
+    st.write("**Island :**", pengu_island)
     st.write("**Sex :**", pengu_sex)
     st.write("**Bill Length (in mm) :**", df.at[0, 'bill_length_mm'])
     st.write("**Bill Depth (in mm) :**", df.at[0, 'bill_depth_mm'])
@@ -173,7 +173,7 @@ print(prediction_proba)
 st.header('Predicted Species')
 penguins_species = {0:'Adelie', 1:'Chinstrap', 2:'Gentoo'}
 prediction = prediction[0]
-st.success("**The Predcited Species for Penguine Considering Input Features is  :**",penguins_species[prediction])
+st.write("***The Predcited Species for Penguine Considering Input Features is  :***",penguins_species[prediction])
 
 st.header('Prediction Probability')
 #st.write(prediction_proba)
