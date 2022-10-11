@@ -173,11 +173,11 @@ print(prediction_proba)
 st.header('Predicted Species')
 penguins_species = {0:'Adelie', 1:'Chinstrap', 2:'Gentoo'}
 prediction = prediction[0]
-st.write("***The Predcited Species for Penguine Considering Input Features is  :***",penguins_species[prediction])
+st.write("**The Predcited Species for Penguine Considering Input Features is  :**",penguins_species[prediction])
 
 st.header('Prediction Probability')
 #st.write(prediction_proba)
-st.markdown('''<h4>The Probability of Penguin Being of  Adelie Species is </h4>''',prediction_proba[0][0],unsafe_allow_html=True)
+st.write("<h4>The Probability of Penguin Being of  Adelie Species is </h4>",prediction_proba[0][0])
 st.write('''The Probability of Penguin Being of  Chinstrap Species is''',prediction_proba[0][1],unsafe_allow_html=True)
 st.write("The Probability of Penguin Being of  Gentoo Species is",prediction_proba[0][2])
 
