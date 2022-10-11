@@ -170,7 +170,8 @@ print(prediction)
 print(prediction_proba)
 #st.write(model_dict[model])
 st.subheader('Predicted Species')
-penguins_species = {'[0]':'Adelie', '[1]':'Chinstrap', '[2]':'Gentoo'}
+penguins_species = {0:'Adelie', 1:'Chinstrap', 2:'Gentoo'}
+prediction = prediction[0]
 st.write("**The Predcited Species for Penguine Considering Input Features is  :**",penguins_species[prediction])
 
 st.subheader('Prediction Probability')
