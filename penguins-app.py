@@ -159,16 +159,24 @@ with vect1:
 model_dict = {'Random Forest Classifier': './models/penguins_rf_clf.pkl',
               'Logistic Regression': './models/penguins_logreg_clf.pkl', 'Support Vector Classifier': './models/penguins_svc_clf.pkl', 'KNeighbors Classifier': './models/penguins_knn_clf.pkl',
               'Gaussian Naive Bayes': './models/penguins_gnb_clf.pkl', 'Decision Tree Classifier': './models/penguins_dt_clf.pkl'}
-st.write(model_dict[model])
+
+
 load_clf = pickle.load(open(model_dict[model], 'rb'))
 
 # Apply model to make predictions
 prediction = load_clf.predict(df)
 prediction_proba = load_clf.predict_proba(df)
-
-st.subheader('Prediction')
+print(prediction)
+print(prediction_proba)
+#st.write(model_dict[model])
+st.subheader('Predicted Species')
 penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
-st.write(penguins_species[prediction])
+st.write("**The Predcited Species for Penguine Considering Input Features is  :**",penguins_species[prediction])
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
+st.write("The Probability of Penguin Being of  Adelie Species is",prediction_proba[0])
+st.write("The Probability of Penguin Being of  Chinstrap Species is",prediction_proba[1])
+st.write("The Probability of Penguin Being of  Gentoo Species is",prediction_proba[2])
+
+
