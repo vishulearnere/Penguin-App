@@ -143,7 +143,7 @@ features, vect1 = st.columns([1, 1], gap="large")
 with features:
     st.write('''<br>''', unsafe_allow_html=True)
     st.header("Penguin Features")
-    st.write('''<h3>Island :</h3>''', pengu_island)
+    st.write('''<h3>Island :</h3>''', pengu_island,unsafe_allow_html=True)
     st.write("**Sex :**", pengu_sex)
     st.write("**Bill Length (in mm) :**", df.at[0, 'bill_length_mm'])
     st.write("**Bill Depth (in mm) :**", df.at[0, 'bill_depth_mm'])
