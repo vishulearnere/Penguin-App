@@ -46,7 +46,7 @@ def footer(p):
 # st.image(img1)
 footer('p')
 st.write("""<h1 align="center">🐧 Penguin Prediction App </h1>
-<h5 align="center" >This app predicts the <b>Palmer Penguin</b> species! </h5>
+<h5 align="center" >This App Predicts The <b>Palmer Penguin</b> Species! </h5>
 <br>
 """, unsafe_allow_html=True)
 
@@ -174,7 +174,7 @@ st.write('''<br>''', unsafe_allow_html=True)
 st.header('Predicted Species')
 penguins_species = {0:'Adelie', 1:'Chinstrap', 2:'Gentoo'}
 prediction = prediction[0]
-st.success("#### The Penguine Species is **"+ str(penguins_species[prediction]) + "**")
+st.success("#### The Penguine Species is  " + "***"+ str(penguins_species[prediction]) + "***")
 #st.sucess("#### The Predcited Species for Penguine Considering Input Features is "+ str(penguins_species[prediction]) + " ")
 st.warning("The Penguin Species is Predicted on the basis of Input Features")
 
