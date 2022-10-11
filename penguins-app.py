@@ -174,7 +174,7 @@ st.header('Predicted Species')
 penguins_species = {0:'Adelie', 1:'Chinstrap', 2:'Gentoo'}
 prediction = prediction[0]
 st.write('''<br>''', unsafe_allow_html=True)
-st.sucess("**The Predcited Species for Penguine Considering Input Features is  : "+ str(penguins_species[prediction]) + "**")
+st.success("**The Predcited Species for Penguine Considering Input Features is  : "+ str(penguins_species[prediction]) + "**")
 
 st.header('Prediction Probability')
 #st.write(prediction_proba)
