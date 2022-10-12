@@ -63,4 +63,9 @@ The dataset consists of 7 columns.
   - Chinstrap
   - Adélie 
   - Gentoo
+  
+## Penguin-App Screencast
+
+
+https://user-images.githubusercontent.com/63242162/195424157-0c2ef1f0-9087-4590-ad3c-c9af5ecd4d7f.mp4
 
