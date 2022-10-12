@@ -189,6 +189,7 @@ with predict_prob:
     st.info("The Probability of Penguin Being of  Gentoo Species :  "+ "**" + str(prediction_proba[0][2]) + "**")
     
 with specie_image:
+    st.write('''<br>''', unsafe_allow_html=True)
     img = Image.open('./penguin_specie.png')
     # img = img.resize((400, 400))
     st.image(img)
