@@ -194,6 +194,26 @@ with specie_image:
     # img = img.resize((400, 400))
     st.image(img)
     
+    
+foot1, foot2, foot3 = st.columns([1, 1.8, 1.5], gap="large")
+with foot1:
+    img = Image.open('./pengu_with guiter.png')
+    # img = img.resize((400, 400))
+    st.image(img)
+
+
+with foot2:
+    img = Image.open('./pengu_tree.png')
+    # img = img.resize((400, 400))
+    st.image(img)
+
+
+with foot3:
+    #anim = load_lottiefile('flypengu.json')
+    # st_lottie(anim)
+    img = Image.open('./right_pengu.png')
+    # img = img.resize((400, 400))
+    st.image(img)
 #st.info('''The Probability of Penguin Being of  Chinstrap Species is''' + str(prediction_proba[0][1])+ ''' ''',unsafe_allow_html=True)
 #st.info("The Probability of Penguin Being of  Gentoo Species is",prediction_proba[0][2])
 
