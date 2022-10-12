@@ -186,7 +186,7 @@ with predict_prob:
     #st.write(prediction_proba)
     st.info("The Probability of Penguin Being of  Adelie Species :  "+ "**" + str(round(prediction_proba[0][0], 2)) + "**")
     st.info("The Probability of Penguin Being of  Chinstrap Species :  "+ "**" + str(round(prediction_proba[0][1], 2)) + "**")
-    st.info("The Probability of Penguin Being of  Gentoo Species :  "+ "**" + str(rounnd(prediction_proba[0][2], 2)) + "**")
+    st.info("The Probability of Penguin Being of  Gentoo Species :  "+ "**" + str(round(prediction_proba[0][2], 2)) + "**")
     
 with specie_image:
     st.write('''<br>''', unsafe_allow_html=True)
