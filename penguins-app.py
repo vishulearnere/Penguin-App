@@ -180,10 +180,10 @@ st.warning("The Penguin Species is Predicted on the basis of Input Features")
 
 
 st.write('''<br>''', unsafe_allow_html=True)
-st.header('Prediction Probability')
-#st.write(prediction_proba)
 predict_prob, specie_image = st.columns([1, 1], gap="large")
 with predict_prob:
+    st.header('Prediction Probability')
+    #st.write(prediction_proba)
     st.info("The Probability of Penguin Being of  Adelie Species :  "+ "**" + str(prediction_proba[0][0]) + "**")
     st.info("The Probability of Penguin Being of  Chinstrap Species :  "+ "**" + str(prediction_proba[0][1]) + "**")
     st.info("The Probability of Penguin Being of  Gentoo Species :  "+ "**" + str(prediction_proba[0][2]) + "**")
