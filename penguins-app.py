@@ -194,7 +194,8 @@ with specie_image:
     # img = img.resize((400, 400))
     st.image(img)
     
-    
+
+st.write('''<br><br>''', unsafe_allow_html=True)    
 foot1, foot2, foot3 = st.columns([1, 1.8, 1.5], gap="large")
 with foot1:
     img = Image.open('./pengu_with guiter.png')
