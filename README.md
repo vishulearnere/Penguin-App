@@ -3,7 +3,7 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)  
 [![Python 3.8|3.9](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-360/)
 ![Type](https://img.shields.io/badge/Machine-Learning-red.svg) ![Type](https://img.shields.io/badge/Type-Supervised-yellow.svg)
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://vishulearnere-penguin-app-penguins-app-2sjevv.streamlitapp.com/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://penguin-species-prediction.streamlit.app/)
 
 ![penguine_vetc1](https://user-images.githubusercontent.com/63242162/195385866-9fe36b93-a1bc-4967-9db6-c9bf2bd2f91f.png)
 
