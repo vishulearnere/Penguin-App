@@ -41,7 +41,7 @@ The dataset consists of 7 columns.
   - Decision Tree Classifier
   
 - Used GridCV for hyperparameter Tuning for each model
-- Bulit an End to End Real Time Web App for [Penguine Specie Prediction](https://vishulearnere-penguin-app-penguins-app-2sjevv.streamlitapp.com/) 
+- Bulit an End to End Real Time Web App for [Penguine Specie Prediction](https://penguin-species-prediction.streamlit.app/) 
 - Deployed the Model On Streamlit Sharing 
 
 ## Web App Features
