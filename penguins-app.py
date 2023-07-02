@@ -46,7 +46,7 @@ def footer(p):
 # st.image(img1)
 footer('p')
 st.write("""<h1 align="center">🐧 Penguin Prediction App </h1>
-<h5 align="center" >This app predicts the <b>Palmer Penguin</b> species! </h5>
+<h5 align="center" >This App Predicts The <b>Palmer Penguin</b> Species! </h5>
 <br>
 """, unsafe_allow_html=True)
 
@@ -128,7 +128,8 @@ for col in encode:
 df = df[:1]  # Selects only the first row (the user input data)
 
 # Displays the user input features
-st.subheader('User Input Penguin Features')
+st.write('''<br>''', unsafe_allow_html=True)
+st.header('User Input Penguin Features')
 
 if uploaded_file is not None:
     st.write(df)
@@ -142,7 +143,7 @@ else:
 features, vect1 = st.columns([1, 1], gap="large")
 with features:
     st.write('''<br>''', unsafe_allow_html=True)
-    st.subheader("Penguin Features")
+    st.header("Penguin Features")
     st.write("**Island :**", pengu_island)
     st.write("**Sex :**", pengu_sex)
     st.write("**Bill Length (in mm) :**", df.at[0, 'bill_length_mm'])
@@ -159,16 +160,62 @@ with vect1:
 model_dict = {'Random Forest Classifier': './models/penguins_rf_clf.pkl',
               'Logistic Regression': './models/penguins_logreg_clf.pkl', 'Support Vector Classifier': './models/penguins_svc_clf.pkl', 'KNeighbors Classifier': './models/penguins_knn_clf.pkl',
               'Gaussian Naive Bayes': './models/penguins_gnb_clf.pkl', 'Decision Tree Classifier': './models/penguins_dt_clf.pkl'}
-st.write(model_dict[model])
+
+
 load_clf = pickle.load(open(model_dict[model], 'rb'))
 
 # Apply model to make predictions
 prediction = load_clf.predict(df)
 prediction_proba = load_clf.predict_proba(df)
+print(prediction)
+print(prediction_proba)
 
-st.subheader('Prediction')
-penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
-st.write(penguins_species[prediction])
+st.write('''<br>''', unsafe_allow_html=True)
+st.header('Predicted Species')
+penguins_species = {0:'Adelie', 1:'Chinstrap', 2:'Gentoo'}
+prediction = prediction[0]
+st.success("#### The Penguine Species is  " + "***"+ str(penguins_species[prediction]) + "***")
+#st.sucess("#### The Predcited Species for Penguine Considering Input Features is "+ str(penguins_species[prediction]) + " ")
+st.warning("The Penguin Species is Predicted on the basis of Input Features")
 
-st.subheader('Prediction Probability')
-st.write(prediction_proba)
+
+st.write('''<br>''', unsafe_allow_html=True)
+predict_prob, specie_image = st.columns([1, 1], gap="large")
+with predict_prob:
+    st.header('Prediction Probability')
+    #st.write(prediction_proba)
+    st.info("The Probability of Penguin Being of  Adelie Species :  "+ "**" + str(round(prediction_proba[0][0], 2)) + "**")
+    st.info("The Probability of Penguin Being of  Chinstrap Species :  "+ "**" + str(round(prediction_proba[0][1], 2)) + "**")
+    st.info("The Probability of Penguin Being of  Gentoo Species :  "+ "**" + str(round(prediction_proba[0][2], 2)) + "**")
+    
+with specie_image:
+    st.write('''<br>''', unsafe_allow_html=True)
+    img = Image.open('./penguin_specie.png')
+    # img = img.resize((400, 400))
+    st.image(img)
+    
+
+st.write('''<br><br>''', unsafe_allow_html=True)    
+foot1, foot2, foot3 = st.columns([1, 1.8, 1.5], gap="large")
+with foot1:
+    img = Image.open('./pengu_with guiter.png')
+    # img = img.resize((400, 400))
+    st.image(img)
+
+
+with foot2:
+    img = Image.open('./pengu_tree.png')
+    # img = img.resize((400, 400))
+    st.image(img)
+
+
+with foot3:
+    #anim = load_lottiefile('flypengu.json')
+    # st_lottie(anim)
+    img = Image.open('./right_pengu.png')
+    # img = img.resize((400, 400))
+    st.image(img)
+#st.info('''The Probability of Penguin Being of  Chinstrap Species is''' + str(prediction_proba[0][1])+ ''' ''',unsafe_allow_html=True)
+#st.info("The Probability of Penguin Being of  Gentoo Species is",prediction_proba[0][2])
+
+
