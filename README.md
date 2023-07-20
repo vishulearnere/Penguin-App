@@ -7,6 +7,16 @@
 
 ![penguine_vetc1](https://user-images.githubusercontent.com/63242162/195385866-9fe36b93-a1bc-4967-9db6-c9bf2bd2f91f.png)
 
+<br><br>
+Penguin Species Prediction App is an end-to-end real-time web app which is designed to help users predict the species of penguins based on their characteristics such as bill length, bill depth, flipper length, body mass and sex in real time. <br>
+Penguin Species Prediction App uses six different machine learning models to predict the species of penguins with high accuracy. The project is build on training multi-class ML models such as Random Forest Classifier, Logistic Regression, Support Vector Classifier, KNeighbors Classifier, Gaussian Naive Bayes and Decision Tree Classifier. GridCV is used for hyperparameter tuning for each model. <br>
+The models are trained using the Palmer Archipelago (Antarctica) penguin data which contains data on three different species of penguins: Chinstrap, Adélie and Gentoo.
+<br><br>
+The web app allows users to choose the machine learning model they want to use for prediction. <br>
+ It has 6 user input features and you can upload the input in CSV format or input them manually.<br>
+The interactive input features allow you to get real-time species prediction by model of your choice and real-time probability prediction of each penguin species such as Chinstrap, Adélie and Gentoo.<br>
+
+
 ## Dataset
 
 [Dataset](https://github.com/allisonhorst/palmerpenguins) Used were collected and made available by [Dr. Kristen
